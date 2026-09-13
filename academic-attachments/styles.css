@@ -83,9 +83,11 @@ a { color: var(--accent); }
   display: flex;
   gap: 10px;
   margin-bottom: 14px;
+  flex-wrap: wrap;
 }
 .search-box input {
-  flex: 1;
+  flex: 1 1 220px;
+  min-width: 0;
   padding: 11px 14px;
   font-size: 15px;
   font-family: var(--sans);
@@ -99,6 +101,7 @@ a { color: var(--accent); }
   outline-offset: 0;
   border-color: var(--accent);
 }
+.search-box .btn { flex: 0 0 auto; }
 .btn {
   padding: 10px 20px;
   font-size: 14px;
@@ -301,38 +304,12 @@ a { color: var(--accent); }
 }
 .file-tree .ico { margin-right: 6px; }
 
-/* 访问方式 */
-.access-box {
-  border: 1px solid var(--line-strong);
-  border-left: 4px solid var(--accent);
-  border-radius: var(--radius);
-  background: var(--card);
-  padding: 14px 18px;
-  max-width: 760px;
-}
-.access-box.restricted { border-left-color: var(--danger); background: #fdfbfa; }
-.access-box .access-title {
-  font-weight: 700;
-  margin-bottom: 4px;
+/* 返回列表 */
+.back-link {
+  padding: 20px 0 50px;
+  margin: 0;
   font-size: 14px;
 }
-.access-box p { font-size: 13.5px; margin-bottom: 10px; }
-.access-box .official-link {
-  display: inline-block;
-  font-size: 13.5px;
-  word-break: break-all;
-}
-
-.policy-note {
-  margin: 18px 0 50px;
-  padding: 14px 18px;
-  background: var(--accent-soft);
-  border-radius: var(--radius);
-  font-size: 13px;
-  color: var(--ink-soft);
-  max-width: 760px;
-}
-.policy-note strong { color: var(--ink); }
 
 /* ---------- 页脚 ---------- */
 .site-footer {
@@ -360,4 +337,10 @@ a { color: var(--accent); }
 @media (max-width: 640px) {
   .detail-meta { grid-template-columns: 1fr; gap: 2px; }
   .detail-meta .k { margin-top: 6px; }
+}
+
+@media (max-width: 480px) {
+  .search-box { gap: 8px; }
+  .search-box input { flex-basis: 100%; }
+  .search-box .btn { flex: 1 1 0; padding: 10px 12px; }
 }

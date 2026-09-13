@@ -8,8 +8,7 @@
  *  type        类型：dataset 数据集 / supplement 补充材料 / code 代码包
  *  size        附件大小（人类可读，来源于发布方声明）
  *  source      来源说明：发布机构 / 仓储 / 许可
- *  access      合规访问方式（开放获取或申请后获取，均指向发布方页面）
- *  accessUrl   发布方官方页面（占位演示链接，example.edu 为保留演示域名）
+ *  access      访问方式说明（开放获取 / 受控申请，仅用于界面受控标记）
  *  updatedAt   更新时间（ISO 8601）
  *  authors     关联论文作者
  *  venue       关联论文出处
@@ -24,7 +23,6 @@ const ATTACHMENTS = [
     size: "4.7 GB（压缩分卷，12 个 NetCDF 文件）",
     source: "高山冰冻圈联合实验室 · 发布于机构数据仓储；CC BY 4.0",
     access: "开放获取，需在发布方页面登记用途后获取",
-    accessUrl: "https://data.example.edu/records/glacier-mb-2024",
     updatedAt: "2024-11-08",
     authors: "李沐霖, Sarah Okafor, 陈昱辰",
     venue: "Journal of Cryospheric Science, 2024",
@@ -53,7 +51,6 @@ const ATTACHMENTS = [
     size: "18 MB（PDF + CSV 表格）",
     source: "计算语言学学会（ACL Anthology 镜像）；CC BY-NC 4.0",
     access: "随论文开放获取",
-    accessUrl: "https://aclanthology.example.org/2024.ijcnlp-1.42/",
     updatedAt: "2024-08-21",
     authors: "Hana Vermeer, 赵青遥, Daniel Ruiz",
     venue: "IJCNLP-AACL 2024",
@@ -76,7 +73,6 @@ const ATTACHMENTS = [
     size: "源码归档 6.3 MB（不含模型权重）",
     source: "第一作者 GitHub 组织 · MIT License；权重依协议单独申请",
     access: "代码开放获取；训练数据与权重需通过机构协议申请",
-    accessUrl: "https://github.example.org/harbourlab/reef-forecast",
     updatedAt: "2025-02-14",
     authors: "A. Fernandez, 林知远, M. Oduya",
     venue: "Nature Computational Science, 2025",
@@ -108,7 +104,6 @@ const ATTACHMENTS = [
     size: "320 MB（Parquet 列式存储）",
     source: "社会经济史数据中心 · 受控访问；数据使用协议（DUA）",
     access: "受限访问：需提交研究计划，经数据治理委员会审批",
-    accessUrl: "https://dsc.example-history.edu/access/ming-qing-fiscal",
     updatedAt: "2023-12-02",
     authors: "吴思齐, P. Holloway, 郑可",
     venue: "Journal of Economic History, 2023",
@@ -134,7 +129,6 @@ const ATTACHMENTS = [
     size: "94 MB（视频、原始曲线与图纸）",
     source: "材料与器件开放仓库（图随文仓储）；CC BY 4.0",
     access: "随论文开放获取",
-    accessUrl: "https://materials.example-repo.org/supplements/flex-array-77",
     updatedAt: "2025-04-30",
     authors: "郭晚晴, I. Petrov, 何川",
     venue: "Advanced Functional Materials, 2025",
@@ -161,7 +155,6 @@ const ATTACHMENTS = [
     size: "12.4 GB（压缩矩阵 + H5AD）",
     source: "国家基因组数据信息中心 · 受控访问（dbGaP 等同机制）",
     access: "受限访问：伦理批件与 DAC 授权后获取",
-    accessUrl: "https://genomics.example.org/dac/study-scatac-tme",
     updatedAt: "2024-06-17",
     authors: "沈听澜, R. Kowalski, 黄薇",
     venue: "Cancer Cell, 2024",
@@ -190,7 +183,6 @@ const ATTACHMENTS = [
     size: "6.5 MB（PDF 与工作簿）",
     source: "海洋研究所机构知识库；CC BY 4.0",
     access: "开放获取",
-    accessUrl: "https://ocean.example-iri.edu/handle/1182/salinity-2023",
     updatedAt: "2023-09-25",
     authors: "田鹭, J. Bergman",
     venue: "Estuarine, Coastal and Shelf Science, 2023",
@@ -212,7 +204,6 @@ const ATTACHMENTS = [
     size: "源码与文档 22 MB（仿真快照需另行生成）",
     source: "公共政策计算实验室 · GPL-3.0",
     access: "开放获取（代码）；内置默认参数包以 CC0 发布",
-    accessUrl: "https://gitlab.example.org/policylab/magpie",
     updatedAt: "2025-07-09",
     authors: "C. Lindqvist, 苏宁望, T. Abe",
     venue: "Journal of Artificial Intelligence Research, 2025",
@@ -246,7 +237,6 @@ const ATTACHMENTS = [
     size: "210 MB（谱图文件与显微照片）",
     source: "科技考古联合实验室 · 发布于机构仓储；CC BY-SA 4.0",
     access: "开放获取，商业使用须遵循相同方式共享",
-    accessUrl: "https://arch-science.example.edu/raman-bronze-patina",
     updatedAt: "2024-03-11",
     authors: "贺明琚, L. Fontaine",
     venue: "Journal of Archaeological Science, 2024",

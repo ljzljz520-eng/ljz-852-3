@@ -203,7 +203,7 @@
     window.scrollTo(0, 0);
   }
 
-  /* ---------- 详情视图：仅摘要 + 文件结构（+合规访问说明） ---------- */
+  /* ---------- 详情视图：仅摘要 + 文件结构 ---------- */
   function renderDetail(idRaw) {
     const id = decodeURIComponent(idRaw);
     const item = ATTACHMENTS.find((x) => x.id === id);
@@ -253,22 +253,7 @@
           <div class="file-tree">${renderTree(item.files)}</div>
         </section>
 
-        <section class="section">
-          <h2>访问方式</h2>
-          <div class="access-box ${restricted ? "restricted" : ""}">
-            <div class="access-title">${restricted ? "🔒 该附件为受控/受限资源" : "🔓 该附件可按发布方条款访问"}</div>
-            <p>${escapeHtml(item.access)}。请通过发布方官方页面完成查阅或申请：</p>
-            <a class="official-link" href="${escapeHtml(item.accessUrl)}" target="_blank"
-               rel="noopener noreferrer">${escapeHtml(item.accessUrl)} ↗</a>
-          </div>
-          <div class="policy-note">
-            <strong>合规提示：</strong>本系统仅提供元数据检索，<strong>不托管、不中转任何附件文件</strong>，
-            也不提供破解、共享账号或规避数据访问协议（DUA）等绕过授权的手段。
-            受控数据集的使用须遵守伦理审批与数据使用协议，禁止重新识别、再分发或转交第三方。
-            如发现来源页面链接失效，请联系发布方，而非寻求替代获取渠道。
-          </div>
-          <p><a href="#/">← 返回检索列表</a></p>
-        </section>
+        <p class="back-link"><a href="#/">← 返回检索列表</a></p>
       </main>`;
     window.scrollTo(0, 0);
   }
